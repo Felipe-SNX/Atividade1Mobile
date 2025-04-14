@@ -36,7 +36,7 @@ class Pontuacao : AppCompatActivity() {
                 val player = findViewById<TextView>(R.id.jogadorTextView);
                 player.text = "Jogador: ${jogador.nome}"
                 val pontuacao = findViewById<TextView>(R.id.acertosTextView);
-                pontuacao.text = "Pontuação Final: ${jogador.pontuacao}"
+                pontuacao.text = "Pontuação Final: ${jogador.pontuacao*20}"
             }
         }
         reiniciarButton = findViewById<Button>(R.id.reiniciarButton);
