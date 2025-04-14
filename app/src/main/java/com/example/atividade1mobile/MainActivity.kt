@@ -19,21 +19,21 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+    }
 
-        //função que envia o nome do jogador e inicia o jogo
-        fun jogar(view: View){
-            val intent = Intent(this, Jogar::class.java);
+    //função que envia o nome do jogador e inicia o jogo
+    fun jogar(view: View){
+        val intent = Intent(this, Jogar::class.java);
 
-            val nome = findViewById<EditText>(R.id.nomeEditText).text.toString();
+        val nome = findViewById<EditText>(R.id.nomeEditText).text.toString();
 
-            val jogador = Jogador(
-                nome = nome,
-                pontuacao = 0
-            )
+        val jogador = Jogador(
+            nome = nome,
+            pontuacao = 0
+        )
 
-            intent.putExtra("jogador", jogador);
+        intent.putExtra("jogador", jogador);
 
-            startActivity(intent);
-        }
+        startActivity(intent);
     }
 }
