@@ -3,10 +3,12 @@ package com.example.atividade1mobile
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
@@ -22,6 +24,9 @@ class Pontuacao : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        var tela = findViewById<View>(R.id.main);
+        tela.setBackgroundColor(ContextCompat.getColor(this, com.google.android.material.R.color.design_default_color_background))
 
         //pega os dados e exibe na tela
         val bundle = intent.extras
