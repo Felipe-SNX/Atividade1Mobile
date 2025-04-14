@@ -77,10 +77,13 @@ class Jogar : AppCompatActivity() {
                     else {
                         tela.setBackgroundColor(ContextCompat.getColor(this, R.color.vermelho))
                         textResposta.text = "Resposta Incorreta!!!"
+                        textCorreta.text = "A Resposta correta é: " + resultado.toString();
                     }
-                    textCorreta.text = "A Resposta correta é: " + resultado.toString();
                     confirmarProximoBotao.text = "Próximo";
                     respostaConfirmada = true;
+
+                    if(perguntaAtual == 5) confirmarProximoBotao.text = "Ver placar";
+
                 }
             }
             else{
@@ -135,7 +138,6 @@ class Jogar : AppCompatActivity() {
                     expressaoTextView.text = string;
                     continuar = false;
                 }
-
             }
         }
         else{
