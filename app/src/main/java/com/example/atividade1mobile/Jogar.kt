@@ -51,6 +51,7 @@ class Jogar : AppCompatActivity() {
         }
 
         tela = findViewById<View>(R.id.main);
+        tela.setBackgroundColor(ContextCompat.getColor(this, com.google.android.material.R.color.design_default_color_background))
         expressaoTextView = findViewById<TextView>(R.id.expressaoTextView);
         contador = findViewById<TextView>(R.id.numQuestTextView);
         confirmarProximoBotao = findViewById<Button>(R.id.nextButton);
